@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Father's Day Wishes for My Girlfriend</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main Page -->
+  <div id="main-page" class="center-box">
+    <h1>Happy Father's Day</h1>
+    <button onclick="showPage('lights-page')">Lights & Quotation</button>
+    <button onclick="showPage('support-page')">Supporting Words & Hug</button>
+  </div>
+
+  <!-- Lights & Quotation Page -->
+  <div id="lights-page" class="hidden lights-wrapper">
+    <div class="lights">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="quotation-box">
+      <h2>“To the love of my life, who brings light into my world every day—Happy Father's Day!”</h2>
+      <button class="next-btn" onclick="showPage('support-page')">Next</button>
+    </div>
+  </div>
+
+  <!-- Supporting Words & Hug Page -->
+  <div id="support-page" class="hidden supporting-box">
+    <div class="supporting-text">
+      <h2>You are strong, kind, and always supportive.<br>
+      Sending you a big virtual hug today and always!</h2>
+    </div>
+    <div class="hug-img">
+      <img src="https://img.icons8.com/emoji/96/000000/hugging-face.png" alt="Hugging Face Emoji">
+    </div>
+    <button class="next-btn" onclick="showPage('main-page')">Back to Home</button>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      document.getElementById('main-page').classList.add('hidden');
+      document.getElementById('lights-page').classList.add('hidden');
+      document.getElementById('support-page').classList.add('hidden');
+      document.getElementById(pageId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
